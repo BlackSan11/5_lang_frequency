@@ -30,10 +30,10 @@ def get_most_frequent_words(text):
 
 
 if __name__ == '__main__':
-    #создаем парсер и получаем аргумент path
+    # создаем парсер и получаем аргумент path
     args_parser = create_args_parser()
     args = args_parser.parse_args()
-    #получаем топ 10 самых часто употребляемых слов в тексте
+    # получаем топ 10 самых часто употребляемых слов в тексте
     top_words_in_text, total_number_of_words = get_most_frequent_words(
         load_text_from_file(args.path))
     if len(top_words_in_text) != 0:
