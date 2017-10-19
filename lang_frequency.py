@@ -24,12 +24,14 @@ def get_most_frequent_words(text):
         if re.search('\d+', word) or word == '':
             continue
         counter_all_words[word] += 1
-    top_of_most_frequent_words = counter_all_words.most_common(10)
+    top_of_most_frequent_words = counter_all_words.most_common(NUBER_OF_TOP)
     total_number_of_words = len(counter_all_words)
     return top_of_most_frequent_words, total_number_of_words
 
 
 if __name__ == '__main__':
+    # количество слов в топе
+    NUBER_OF_TOP = 10
     # создаем парсер и получаем аргумент path
     args_parser = create_args_parser()
     args = args_parser.parse_args()
